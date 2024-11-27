@@ -1,44 +1,50 @@
-import React from "react";
-import { Link } from "react-router";
+// ShowAllUsers.jsx
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom"; // Sørg for at importere fra "react-router-dom"
+
+const url = "http://localhost:3000/users/";
 
 function ShowAllUsers() {
-  return (
-    <>
-      <div>
-        <h1>All Users</h1>
+  const [users, setUsers] = useState([]);
 
-        <table border="1" style={{ width: "100%", borderCollapse: "collapse" }}>
-          <thead>
-            <tr>
-              <th>Username</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>user1</td>
+  // useEffect til at hente brugerne fra API'et, når komponenten bliver monteret
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((usersData) => {
+        setUsers(usersData);
+      })
+      .catch((error) => {
+        console.error("Error fetching users:", error);
+      });
+  }, []);
+
+  return (
+    <div>
+      <h1>All Users</h1>
+      <table border="1" style={{ width: "100%", borderCollapse: "collapse" }}>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user) => (
+            <tr key={user.id}>
+              <td>{user.username}</td>
               <td>
                 <div>
-                  <Link to="/ShowUser">
+                  <Link to={`/ShowUser/${user.id}`}>
                     <button className="view">View User</button>
                   </Link>
                 </div>
               </td>
             </tr>
-            <tr>
-              <td>user2</td>
-              <td>
-                <div>
-                  <Link to="/ShowUser">
-                    <button className="view">View User</button>
-                  </Link>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
