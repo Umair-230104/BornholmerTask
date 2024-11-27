@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #737373;
+  padding: 10px;
+}
+
+.logo {
+  width: 35%;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.sidebar {
+  background-color: #e8e8e8;
+  padding: px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.main-content {
+  background-color: #fff;
+  padding: 20px;
+}
+
+a.active {
+  color: red;
+}
+
+.button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.loginSideButton {
+  background-color: #16a73f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.view {
+  background-color: #737373;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.change {
+  background-color: #e8e8e8;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.backTo {
+  background-color: #e00c0c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 10px;
+  cursor: pointer;
+}
