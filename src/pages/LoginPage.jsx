@@ -1,25 +1,12 @@
 // LoginPage.jsx
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router";
 
-function LoginPage() {
+function LoginPage({ users, setLoginSuccess }) {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [users, setUsers] = useState([]);
-  const [loginSuccess, setLoginSuccess] = useState(false);
   const [error, setError] = useState("");
-
-  const url = "http://localhost:3000/users/";
-
-  // useEffect til at hente brugerne fra API'et, når komponenten bliver monteret
-  useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((usersData) => {
-        setUsers(usersData);
-      });
-  }, []);
 
   const handleLogin = (e) => {
     e.preventDefault();

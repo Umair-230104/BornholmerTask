@@ -1,24 +1,7 @@
 // ShowAllUsers.jsx
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom"; // Sørg for at importere fra "react-router-dom"
+import { Link } from "react-router"; // Sørg for at importere fra "react-router"
 
-const url = "http://localhost:3000/users/";
-
-function ShowAllUsers() {
-  const [users, setUsers] = useState([]);
-
-  // useEffect til at hente brugerne fra API'et, når komponenten bliver monteret
-  useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((usersData) => {
-        setUsers(usersData);
-      })
-      .catch((error) => {
-        console.error("Error fetching users:", error);
-      });
-  }, []);
-
+function ShowAllUsers({ users }) {
   return (
     <div>
       <h1>All Users</h1>
@@ -35,7 +18,7 @@ function ShowAllUsers() {
               <td>{user.username}</td>
               <td>
                 <div>
-                  <Link to={`/ShowUser/${user.id}`}>
+                  <Link to={`/showuser/${user.id}`}>
                     <button className="view">View User</button>
                   </Link>
                 </div>

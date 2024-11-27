@@ -1,65 +1,86 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "username": "john_doe",
-        "password": "password1",
-        "roles": ["user"]
-      },
-      {
-        "id": 2,
-        "username": "jane_admin",
-        "password": "admin123",
-        "roles": ["admin"]
-      },
-      {
-        "id": 3,
-        "username": "superman123",
-        "password": "super123",
-        "roles": ["superman"]
-      },
-      {
-        "id": 4,
-        "username": "alice_user",
-        "password": "alice123",
-        "roles": ["user"]
-      },
-      {
-        "id": 5,
-        "username": "bob_admin",
-        "password": "bob123",
-        "roles": ["admin"]
-      },
-      {
-        "id": 6,
-        "username": "charlie_superman",
-        "password": "charlie123",
-        "roles": ["superman"]
-      },
-      {
-        "id": 7,
-        "username": "dave_user",
-        "password": "dave123",
-        "roles": ["user"]
-      },
-      {
-        "id": 8,
-        "username": "eve_admin",
-        "password": "eve123",
-        "roles": ["admin"]
-      },
-      {
-        "id": 9,
-        "username": "frank_superman",
-        "password": "frank123",
-        "roles": ["superman"]
-      },
-      {
-        "id": 10,
-        "username": "grace_user",
-        "password": "grace123",
-        "roles": ["user"]
-      }
-    ]
-  }
-  
+  "users": [
+    {
+      "id": "1",
+      "username": "john_doe",
+      "password": "password1",
+      "roles": [
+        "user",
+        "admin",
+        "superman"
+      ]
+    },
+    {
+      "id": "2",
+      "username": "jane_admin",
+      "password": "admin123",
+      "roles": [
+        "admin"
+      ]
+    },
+    {
+      "id": "3",
+      "username": "superman123",
+      "password": "super",
+      "roles": [
+        "superman"
+      ]
+    },
+    {
+      "id": "4",
+      "username": "alice_user",
+      "password": "alice123",
+      "roles": [
+        "user"
+      ]
+    },
+    {
+      "id": "5",
+      "username": "bob_admin",
+      "password": "bob123",
+      "roles": [
+        "admin"
+      ]
+    },
+    {
+      "id": "6",
+      "username": "charlie_superman",
+      "password": "charlie123",
+      "roles": [
+        "superman"
+      ]
+    },
+    {
+      "id": "7",
+      "username": "dave_user",
+      "password": "dave123",
+      "roles": [
+        "user"
+      ]
+    },
+    {
+      "id": "8",
+      "username": "eve_admin",
+      "password": "eve123",
+      "roles": [
+        "admin"
+      ]
+    },
+    {
+      "id": "9",
+      "username": "frank_superman",
+      "password": "frank123",
+      "roles": [
+        "superman"
+      ]
+    },
+    {
+      "id": "10",
+      "username": "grace_user",
+      "password": "grace123",
+      "roles": [
+        "user"
+      ]
+    }
+  ]
+}
